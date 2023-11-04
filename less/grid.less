@@ -1,0 +1,23 @@
+.generate_columns(@suf,@n,@i:1) when (@i=<@n){
+    @column-selector: ~".col-@{suf}@{i}";
+    @{column-selector}{
+        flex-basis:(@i *100%/@n);
+
+    }
+    .generate_columns(@suf,@n,(@i+1));
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    [class*="col-"]{
+        flex:1;
+    }
+
+    @media (min-width:@size[tablet]){
+        @sf1 : @size-prf[tablet];
+        @suf : ~"@{sf1}-";
+        .generate_columns(@suf, 12);
+    }
+}

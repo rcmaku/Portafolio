@@ -1,0 +1,123 @@
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @header-bg-color;
+    section{
+        font-size: 1.2rem;
+        color:@header-txt-color;
+        font-weight: bold;
+
+    }
+    nav{
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                a{
+                    display:inline-block;
+                    padding: 0.5rem 0.75rem;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: @header-txt-color
+                }
+            }
+
+        }
+    }
+}
+
+footer{
+    .no_padding_margin();
+    display: flex;
+    justify-content: center;
+    background-color: @header-bg-color;
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    section{
+        display: flex;
+        nav{
+            
+            ul{
+                display: inline-block;
+                justify-content: space-between;
+                list-style: none;
+                margin: 1rem;
+
+            }
+        }
+    }
+}
+
+
+main{
+    .no_padding_margin();
+
+    section{
+        display:block;
+        justify-content: center;
+        align-items: center;
+        h1{
+            display: block;
+            //align-items: center;
+        }
+        picture{
+            display: block;
+            img{
+                border-radius: 50%;
+                border-style: groove;
+            }
+        }
+    }
+    
+
+}
+
+.hero-panel{
+    .no_padding_margin();
+    position: relative;
+    height: 380px;
+    @media (min-width: @size[tablet]){
+        height:640px;
+    }
+    overflow: hidden;
+    
+}
+
+.bg-img{
+    background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); // Path to your background image
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.profileJP{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    //text-shadow: 0.7em 0 black;
+    color:@primary-txt-color;
+    background: rgba(33, 33, 33, .9);
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(33, 33, 33, .9);
+    justify-content: space-evenly;
+}
+
