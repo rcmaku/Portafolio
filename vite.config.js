@@ -24,5 +24,6 @@ export default defineConfig({
         }),
         htmlPurge({}),
         ViteMinifyPlugin({}),
-    ]
+    ],
+    base: "/Portafolio/"
 })
